@@ -2,7 +2,7 @@ import axios from 'axios';
 import {GET_LATEST,GET_OTHER,GET_ARTICLE_DATA, HANDLE_LIKES_ARTICLE,CLEAR_ARTICLE_DATA} from '../types';
 
 //Import Types INTO ACTION CREATORS
-const URL_ARTICLES = 'http://localhost:3004/articles';
+const URL_ARTICLES = 'https://database-vb.herokuapp.com/articles';
 
 export function latestNews(){
     const request = axios.get(`${URL_ARTICLES}?_order=desc&_end=2`).then(response => response.data);
